@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: YOUR_DOCKERHUB_USERNAME/coffee-shop-frontend:v1
+          image: shiva029/coffee-shop-frontend:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 80

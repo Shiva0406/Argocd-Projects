@@ -4,7 +4,7 @@ kind: Application
 
 metadata:
   name: coffee-shop
-  namespace: argocd
+  namespace: coffee-shop
 
 spec:
   project: default

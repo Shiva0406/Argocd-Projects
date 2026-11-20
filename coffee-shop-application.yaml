@@ -1,0 +1,32 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: coffee-shop
+  namespace: argocd
+
+spec:
+  project: default
+
+  # GitHub repository connection
+  source:
+    repoURL: https://github.com/Shiva0406/Argocd-Projects.git
+    targetRevision: main
+
+    # Folder containing Kubernetes manifests
+    path: coffee-shop-fullstack
+
+  # Kubernetes deployment destination
+  destination:
+    server: https://172.31.42.201:33893
+    namespace: coffee-shop
+
+  # Automatic GitOps synchronization
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true

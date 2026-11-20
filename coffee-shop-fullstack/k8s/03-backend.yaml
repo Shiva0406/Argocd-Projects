@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: YOUR_DOCKERHUB_USERNAME/coffee-shop-backend:v1
+          image: YOUR_DOCKERHUB_USERNAME/coffee-shop-backend:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
